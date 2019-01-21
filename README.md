@@ -1,4 +1,4 @@
-# Stimulus inline edit component
+# Stimulus inline edit controller
 
 A StimulusJS controller to add inline edit to Rails-powered input fields.
 Add the controller to your project and add the specific html.
