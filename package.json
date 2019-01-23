@@ -1,0 +1,10 @@
+{
+  "name": "stimulus-inline-edit",
+  "version": "1.0.0",
+  "description": "A StimulusJS controller to add inline edit to Rails-powered input fields.",
+  "main": "index.js",
+  "repository": "git@github.com:eelcoj/stimulus-inline-edit.git",
+  "author": "eelco <eelco@needlesstosay.co>",
+  "license": "MIT",
+  "private": false
+}
