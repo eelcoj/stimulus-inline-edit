@@ -2,8 +2,11 @@
   "name": "stimulus-inline-edit",
   "version": "1.0.1",
   "description": "A StimulusJS controller to add inline edit to Rails-powered input fields.",
-  "main": "index.js",
-  "repository": "git@github.com:eelcoj/stimulus-inline-edit.git",
+  "main": "dist/stimulus-inline-edit.min.js",
+  "repository": {
+    "url": "https://github.com/eelcoj/stimulus-inline-edit",
+    "type": "git"
+  },
   "author": "eelco <eelco@needlesstosay.co>",
   "license": "MIT",
   "private": false,
@@ -15,5 +18,37 @@
   ],
   "dependencies": {
     "stimulus": "^1.1.0"
+  },
+  "babel": {
+    "plugins": [
+      "transform-class-properties",
+      "transform-runtime"
+    ],
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "build": "webpack --env dev && webpack --env build",
+    "prepublish": "yarn run build",
+    "test": "echo \"No test specified\""
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-middleware": "^3.1.3"
   }
 }
